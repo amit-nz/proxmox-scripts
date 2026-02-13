@@ -1,0 +1,10 @@
+# Place this file in a Proxmox storage that can host snippets
+# By default, this can be in the "local" storage, which makes
+# the path /var/lib/vz/snippets/tz_config_and_install_qemu_ga.yml
+
+timezone: Pacific/Auckland # Adjust as needed
+packages:
+  - qemu-guest-agent
+runcmd:
+  - systemctl enable qemu-guest-agent
+  - systemctl start qemu-guest-agent
