@@ -33,8 +33,8 @@ qm set 9001 --boot c --bootdisk virtio0
 qm set 9001 --serial0 socket --vga serial0
 qm set 9001 --agent 1
 qm set 9001 --cicustom "vendor=local:snippets/tz_config_and_install_qemu_ga.yml"
-qm set 9000 --ipconfig0 ip=dhcp,ip6=auto
-qm set 9000 --sshkeys /tmp/ssh-key
+qm set 9001 --ipconfig0 ip=dhcp,ip6=auto
+qm set 9001 --sshkeys /tmp/ssh-key
 qm set 9001 --ciuser yourusername # Set username; without this, it will just be "ubuntu"
 
 # Rocky
@@ -50,8 +50,8 @@ qm set 9002 --cpu x86-64-v2-AES
 qm set 9002 --serial0 socket --vga serial0
 qm set 9002 --agent 1
 qm set 9002 --cicustom "vendor=local:snippets/tz_config_and_install_qemu_ga.yml"
-qm set 9000 --ipconfig0 ip=dhcp,ip6=auto
-qm set 9000 --sshkeys /tmp/ssh-key
+qm set 9002 --ipconfig0 ip=dhcp,ip6=auto
+qm set 9002 --sshkeys /tmp/ssh-key
 qm set 9002 --ciuser yourusername # Set username; without this, it will just be "cloud-user"
 
 # Convert all the above to templates:
